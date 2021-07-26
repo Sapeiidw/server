@@ -96,7 +96,7 @@ class UserController extends Controller
             'name' => "required|string",
             'email' => "required|email|unique:users,email,".$id,            
         ]);
-        // $request->role = $request->role !== null ? $request->role : 'user';
+        $request->role = $request->role !== null ? $request->role : $user->roles->first()->name;
 
         $user->update([
             'name' => $request->name,

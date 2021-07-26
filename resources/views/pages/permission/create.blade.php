@@ -22,15 +22,6 @@
                             @enderror
                         </div>
 
-                        <div class="mt-4">
-                            <x-jet-label for="permissions" value="permissions" />
-                            <select class="block w-full mt-1 js-example-basic-multiple" name="permissions[]" multiple="multiple">
-                            </select>
-                            @error('permissions')
-                                <span class="text-red-900 p-2">{{ $message }}</span>
-                            @enderror
-                        </div>
-
                         <div class="flex items-center justify-end mt-4">
                             <x-jet-button class="ml-4">
                                 {{ __('Create') }}
@@ -41,15 +32,4 @@
             </div>
         </div>
     </div>
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js" integrity="sha512-6ORWJX/LrnSjBzwefdNUyLCMTIsGoNP6NftMy2UAm1JBm6PRZCO1d7OHBStWpVFZLO+RerTvqX/Z9mBFfCJZ4A==" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('.js-example-basic-multiple').select2({
-                tags: true,
-                tokenSeparators: [',']
-            });
-        });
-    </script>
 </x-app-layout>

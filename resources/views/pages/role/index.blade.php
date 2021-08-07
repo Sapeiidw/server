@@ -49,6 +49,32 @@
                                                 <x-th>
                                                     Action
                                                 </x-th>
+                                                <x-td>
+                                                    <p class="text-gray-900 whitespace-no-wrap">{{ $loop->iteration }}</p>
+                                                </x-td>
+                                                <x-td>
+                                                    <p class="text-gray-900 whitespace-no-wrap">{{ $item->name }}</p>
+                                                </x-td>
+                                                <x-td>
+                                                    @foreach ($item->permissions as $permission)
+                                                        <x-badge>{{ $permission->name }}</x-badge>
+                                                    @endforeach
+                                                </x-td>
+                                                <x-td>
+                                                    <a href="{{ route('role.edit', $item->id) }}"
+                                                        class="relative inline-block bg-indigo-50 rounded-full px-3 py-1 font-semibold text-indigo-900 leading-tight">
+                                                        Edit
+                                                    </a>
+                                                    <form action="{{ route('role.destroy', $item->id) }}" method="post" class="relative inline-block">
+                                                     @csrf
+                                                     @method('DELETE')
+                                                     <button type="submit"
+                                                        class="relative inline-block bg-red-50 rounded-full px-3 py-1 font-semibold text-red-900 leading-tight"
+                                                        onclick="return confirm('are you sure?!')">
+                                                        Delete
+                                                    </button>
+                                                    </form>
+                                                </x-td>
                                             </x-tr>
                                         </thead>
                                         <tbody>
@@ -97,3 +123,4 @@
         </div>
     </div>
 </x-admin-layout>
+

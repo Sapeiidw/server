@@ -1,5 +1,5 @@
 
-<x-app-layout>
+<x-admin-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             <a href="{{ route('user.index') }}" class="text-indigo-800">User</a> > Edit
@@ -20,7 +20,7 @@
                                 <span class="text-red-900 p-2">{{ $message }}</span>
                             @enderror
                         </div>
-                        
+
                         <div class="mt-4">
                             <x-jet-label for="email" value="Email" />
                             <x-jet-input class="block w-full mt-1" type="email" name="email" value="{{ $user->email }}" />
@@ -51,4 +51,4 @@
             </div>
         </div>
     </div>
-</x-app-layout>
+</x-admin-layout>

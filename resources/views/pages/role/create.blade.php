@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-admin-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Role > Create') }}
@@ -27,9 +27,9 @@
                                 {{ __('Create') }}
                             </x-jet-button>
                         </div>
-                    </form>      
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-</x-app-layout>
+</x-admin-layout>

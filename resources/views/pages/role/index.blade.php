@@ -1,19 +1,20 @@
-<x-app-layout>
+<x-admin-layout>
+    <div class="w-4/5">
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Role') }}
         </h2>
     </x-slot>
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+
+    <div class="bg-red-500 relative justify-center w-full items-center m-14 h-screen">
+        <div class="py-8 bg-gray-900 w-full sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <div class="container mx-auto px-4 sm:px-8">
-                    <div class="py-8">
+                <div class="mx-auto px-4 sm:px-8">
+                    <div class="py-6">
                         {{-- <div>
                             <h2 class="text-2xl font-semibold leading-tight">Role</h2>
                         </div> --}}
                         <div class="my-2 flex justify-between sm:flex-row flex-col">
-
                             <div class="block relative">
                                 <span class="h-full absolute inset-y-0 left-0 flex items-center pl-2">
                                     <svg viewBox="0 0 24 24" class="h-4 w-4 fill-current text-gray-500">
@@ -27,7 +28,9 @@
                                     class="appearance-none rounded-r rounded-l sm:rounded-l-none border border-gray-400 border-b block pl-8 pr-6 py-2 w-full bg-white text-sm placeholder-gray-400 text-gray-700 focus:bg-white focus:placeholder-gray-600 focus:text-gray-700 focus:outline-none" />
                                 </form>
                             </div>
-                            <a href="{{ route('role.create') }}" class="py-2 px-3 bg-gray-800 text-white text-sm rounded">Add Role</a>
+                            <x-jet-button>
+                                <a href="{{ route('role.create') }}" >Add Role</a>
+                            </x-jet-button>
                         </div>
                         <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
                             <div class="inline-block min-w-full shadow rounded-lg overflow-hidden">
@@ -91,5 +94,7 @@
                 </div>
             </div>
         </div>
-    </div>   
-</x-app-layout>
+    </div>
+</div>
+</x-admin-layout>
+

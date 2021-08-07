@@ -30,7 +30,7 @@
             <!-- Page Heading -->
 
             <!-- Page Content -->
-            <main class="flex min-h-screen h-full">
+            <main class="flex min-h-screen">
                 @include('sidebar-admin')
                 {{ $slot }}
             </main>

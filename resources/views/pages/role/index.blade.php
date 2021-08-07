@@ -6,7 +6,7 @@
             </h2>
         </x-slot>
 
-        <div class="bg-red-500 relative justify-center w-full items-center m-14 ">
+        <div class="p-4 bg-red-500 relative justify-center w-full items-center m-14 ">
             <div class="py-8 bg-gray-900 w-full sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                     <div class="mx-auto px-4 sm:px-8">

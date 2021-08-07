@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-admin-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Role > Create') }}
@@ -26,7 +26,7 @@
                             <x-jet-label for="permissions" value="permissions" />
                             <select class="block w-full mt-1 js-example-basic-multiple" name="permissions[]" multiple="multiple">
                                 @foreach ($permissions as $permission)
-                                    <option {{ $role->permissions()->find($permission->id) ? "selected" : "" }}  value="{{ $permission->name }}">{{ $permission->name }}</option>    
+                                    <option {{ $role->permissions()->find($permission->id) ? "selected" : "" }}  value="{{ $permission->name }}">{{ $permission->name }}</option>
                                 @endforeach
                             </select>
                             @error('permissions')
@@ -39,7 +39,7 @@
                                 {{ __('Create') }}
                             </x-jet-button>
                         </div>
-                    </form>      
+                    </form>
                 </div>
             </div>
         </div>
@@ -53,4 +53,4 @@
             });
         });
     </script>
-</x-app-layout>
+</x-admin-layout>

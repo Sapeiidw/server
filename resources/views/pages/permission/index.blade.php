@@ -1,12 +1,13 @@
-<x-app-layout>
+<x-admin-layout>
+    <div class="w-4/5">
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Permission') }}
         </h2>
     </x-slot>
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+        <div class="h-full w-full mx-auto sm:px-6 lg:px-8 ">
+            <div class="w-full bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <div class="container mx-auto px-4 sm:px-8">
                     <div class="py-8">
                         {{-- <div>
@@ -27,7 +28,10 @@
                                     class="appearance-none rounded-r rounded-l sm:rounded-l-none border border-gray-400 border-b block pl-8 pr-6 py-2 w-full bg-white text-sm placeholder-gray-400 text-gray-700 focus:bg-white focus:placeholder-gray-600 focus:text-gray-700 focus:outline-none" />
                                 </form>
                             </div>
-                            <a href="{{ route('permission.create') }}" class="py-2 px-3 bg-gray-800 text-white text-sm rounded">Add Permission</a>
+                            <x-jet-button>
+                                <a href="{{ route('permission.create') }}" >Add Permission</a>
+                            </x-jet-button>
+
                         </div>
                         <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
                             <div class="inline-block min-w-full shadow rounded-lg overflow-hidden">
@@ -51,7 +55,7 @@
                                                 <x-td>
                                                     <p class="text-gray-900 whitespace-no-wrap">{{ $loop->iteration }}</p>
                                                 </x-td>
-                                                <x-td>                                                
+                                                <x-td>
                                                     <x-badge>{{ $item->name }}</x-badge>
                                                 </x-td>
                                                 <x-td>
@@ -83,5 +87,6 @@
                 </div>
             </div>
         </div>
-    </div>   
-</x-app-layout>
+    </div>
+</div>
+</x-admin-layout>

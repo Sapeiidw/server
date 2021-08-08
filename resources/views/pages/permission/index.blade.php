@@ -5,15 +5,8 @@
             {{ __('Permission') }}
         </h2>
     </x-slot>
-    <div class="py-12">
-        <div class="h-full w-full mx-auto sm:px-6 lg:px-8 ">
-            <div class="w-full bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <div class="container mx-auto px-4 sm:px-8">
-                    <div class="py-8">
-                        {{-- <div>
-                            <h2 class="text-2xl font-semibold leading-tight">Permission</h2>
-                        </div> --}}
-                        <div class="my-2 flex justify-between sm:flex-row flex-col">
+    <x-boxtable>
+        <div class="my-2 flex justify-between sm:flex-row flex-col">
 
                             <div class="block relative">
                                 <span class="h-full absolute inset-y-0 left-0 flex items-center pl-2">
@@ -25,7 +18,7 @@
                                 </span>
                                 <form action="{{ route('permission.index') }}" method="get">
                                     <input placeholder="Search" name="search"
-                                    class="appearance-none rounded-r rounded-l sm:rounded-l-none border border-gray-400 border-b block pl-8 pr-6 py-2 w-full bg-white text-sm placeholder-gray-400 text-gray-700 focus:bg-white focus:placeholder-gray-600 focus:text-gray-700 focus:outline-none" />
+                                    class="appearance-none rounded-full border border-gray-400 border-b block pl-8 pr-6 py-2 w-full bg-white text-sm placeholder-gray-400 text-gray-700 focus:bg-white focus:placeholder-gray-600 focus:text-gray-700 focus:outline-none" />
                                 </form>
                             </div>
                             <x-jet-button>
@@ -83,11 +76,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
+    </x-boxtable>
 </div>
 </x-admin-layout>

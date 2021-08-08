@@ -23,16 +23,30 @@
 
 <x-clientstyle>
     @slot('title')
+    <a href="http://client.domain.test">
         judulunya client
+    </a>
+
     @endslot
-    <div>
+    <div class="">
         <a href="http://client.domain.test">
-            <img class=" bg-white md:h-auto md:rounded-t-3xl rounded-t-3xl hover:grow hover:shadow-lg" src="{{ asset('img/undraw_text_files_au1q.svg') }}">
+            <img class="bg-white md:h-auto hover:grow  hover:shadow-lg" src="{{ asset('img/undraw_text_files_au1q.svg') }}">
         </a>
     </div>
 </x-clientstyle>
 
 <x-clientstyle>
+    @slot('title')
+        judulunya client 1
+    @endslot
+    <div class="">
+        <a href="http://client.domain.test">
+            <img class="bg-white md:h-auto hover:grow hover:shadow-lg" src="{{ asset('img/undraw_text_files_au1q.svg') }}">
+        </a>
+    </div>
+</x-clientstyle>
+
+{{-- <x-clientstyle>
     @slot('title')
         judulunya client 2
     @endslot
@@ -41,4 +55,4 @@
             <img class="hover:grow hover:shadow-lg" src="https://images.unsplash.com/photo-1555982105-d25af4182e4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80">
         </a>
     </div>
-</x-clientstyle>
+</x-clientstyle> --}}

@@ -1,13 +1,18 @@
-<div class="w-full flex-col md:w-1/4 xl:w-1/3 sm:items-center sm:justify-center bg-gray-400 rounded-t-3xl rounded-b-3xl  border-gray-800 m-4">
-    <div class="flex-none">
-        {{ $slot }}
-    </div>
-    <button class=" hover:bg-blue-700 bg-blue-500 rounded-full p-2 text-gray-300 m-2">
-        <div class="px-2 items-start justify-center">
-            {{ $title }}
+<div class=" hover:bg-blue-300 shadow-md flex-col border-sm border-gray-800 md:w-1/4 xl:w-1/3 bg-gray-300 rounded-2xl m-5">
+    <div class="w-full sm:items-center sm:justify-center border-gray-800">
+        <div class="flex-none bg-white mt-4">
+            {{ $slot }}
         </div>
-    </button>
+        <div class="m-1">
+            <button class="w-full  bg-blue-500 rounded-full p-1 text-gray-300">
+                <div class="px-2 items-start justify-center">
+                    {{ $title }}
+                </div>
+            </button>
+        </div>
+    </div>
 </div>
+
 
 {{-- <div class="w-full md:w-1/4 xl:w-1/4 p-6 flex flex-col">
     <div class=" shadow-sm hover:grow hover:shadow-xl p-2 bg-gray-400 items-center flex flex-col rounded-md">

@@ -1,7 +1,7 @@
 <nav x-data="{ open: false }" class="bg-white">
     <!-- Primary Navigation Menu -->
     <div class="p-2 bg-blue-500">
-        <div class=" bg-gray-400 mx-auto  rounded-full px-2 sm:px-6 lg:px-8">
+        <div class=" bg-gray-200 mx-auto  rounded-full px-2 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex">
                     <!-- Logo -->
@@ -76,7 +76,7 @@
 
                     <!-- Settings Dropdown -->
                     <div class="ml-4 relative">
-                        <x-jet-dropdown align="right" width="60">
+                        <x-jet-dropdown align="right" width="48">
                             <x-slot name="trigger">
                                 @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
                                     <button class="flex text-sm text-bold border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition">

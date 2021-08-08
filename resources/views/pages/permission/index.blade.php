@@ -68,7 +68,7 @@
                                                      @method('DELETE')
                                                      <button type="submit"
                                                         class="relative inline-block bg-red-50 rounded-full px-3 py-1 font-semibold text-red-900 leading-tight"
-                                                        onclick="return confirm('are you sure?!')">
+                                                        onclick="confirm('are you sure?!')">
                                                         Delete
                                                     </button>
                                                     </form>
@@ -87,7 +87,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 </div>
 </x-admin-layout>

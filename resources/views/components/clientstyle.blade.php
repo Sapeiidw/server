@@ -1,10 +1,10 @@
-<div class=" hover:bg-blue-300 shadow-md flex-col border-sm border-gray-800 md:w-1/4 xl:w-1/3 bg-gray-300 rounded-2xl m-5">
-    <div class="w-full sm:items-center sm:justify-center border-gray-800">
+<div class=" hover:bg-blue-300 shadow-md flex-col border border-gray-300 md:w-1/4 xl:w-1/3 bg-gray-300 rounded-2xl m-5">
+    <div class="w-full sm:items-center sm:justify-center">
         <div class="flex-none bg-white mt-4">
             {{ $slot }}
         </div>
         <div class="m-1">
-            <button class="w-full  bg-blue-500 rounded-full p-1 text-gray-300">
+            <button class="w-full hover:bg-blue-700 bg-blue-500 rounded-full p-1 text-gray-300">
                 <div class="px-2 items-start justify-center">
                     {{ $title }}
                 </div>

@@ -11,16 +11,16 @@
                 <form action="{{ route('user.store') }}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="mt-4">
-                        <x-jet-label for="email" value="Name" />
-                        <x-jet-input class="block w-full mt-1" type="text" name="name" :value="old('name')"/>
+                        {{-- <x-jet-label for="email" value="Name" /> --}}
+                        <x-jet-input placeholder="Name" class="block w-full mt-1" type="text" name="name" :value="old('name')"/>
                         @error('name')
                             <span class="text-red-900 p-2">{{ $message }}</span>
                         @enderror
                     </div>
 
                     <div class="mt-4">
-                        <x-jet-label for="email" value="Email" />
-                        <x-jet-input class="block w-full mt-1" type="email" name="email" :value="old('email')" />
+                        {{-- <x-jet-label for="email" value="Email" /> --}}
+                        <x-jet-input placeholder="Email" class="block w-full mt-1" type="email" name="email" :value="old('email')" />
                         @error('email')
                             <span class="text-red-900 p-2">{{ $message }}</span>
                         @enderror
@@ -28,9 +28,9 @@
 
                     <!-- Password -->
                     <div class="mt-4">
-                        <x-jet-label for="password" :value="__('Password')" />
+                        {{-- <x-jet-label for="password" :value="__('Password')" /> --}}
 
-                        <x-jet-input id="password" class="block mt-1 w-full"
+                        <x-jet-input placeholder="Password"  id="password" class="block mt-1 w-full"
                                         type="password"
                                         name="password"
                                         required autocomplete="new-password" />
@@ -41,9 +41,9 @@
 
                     <!-- Confirm Password -->
                     <div class="mt-4">
-                        <x-jet-label for="password_confirmation" :value="__('Confirm Password')" />
+                        {{-- <x-jet-label for="password_confirmation" :value="__('Confirm Password')" /> --}}
 
-                        <x-jet-input id="password_confirmation" class="block mt-1 w-full"
+                        <x-jet-input placeholder="Confirm Password" id="password_confirmation" class="block mt-1 w-full"
                                         type="password"
                                         name="password_confirmation" required />
                     </div>

@@ -22,7 +22,7 @@
 
                 <div class="mt-4">
                     <x-jet-label for="permissions" value="permissions" />
-                    <select class="block w-full mt-1 js-example-basic-multiple" name="permissions[]" multiple="multiple">
+                    <select class="block w-full mt-1 js-example-basic-multiple rounded-2xl" name="permissions[]" multiple="multiple">
                         @foreach ($permissions as $permission)
                             <option {{ $role->permissions()->find($permission->id) ? "selected" : "" }}  value="{{ $permission->name }}">{{ $permission->name }}</option>
                         @endforeach

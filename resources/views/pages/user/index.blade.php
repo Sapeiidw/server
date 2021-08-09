@@ -34,21 +34,27 @@
                         <thead>
                             <x-tr>
                                 <x-th>
+                                    <i class="fas fa-user mr-1"></i>
                                     Name
                                 </x-th>
                                 <x-th>
+                                    <i class="fas fa-envelope mr-1"></i>
                                     Email
                                 </x-th>
                                 <x-th>
+                                    <i class="fas fa-folder-plus mr-1"></i>
                                     Created at
                                 </x-th>
                                 <x-th>
-                                    Status
+                                    <i class="fas fa-user-check mr-1"></i>
+                                    Verified
                                 </x-th>
                                 <x-th>
+                                    <i class="fas fa-user-tag mr-1"></i>
                                     Role
                                 </x-th>
                                 <x-th>
+                                    <i class="fas fa-edit mr-1"></i>
                                     Action
                                 </x-th>
                             </x-tr>
@@ -77,21 +83,21 @@
                                 </x-td>
                                 <x-td>
                                     @if ($item->email_verified_at)
-                                        <x-badge>Verified</x-badge>
+                                        <i class="fas fa-check ml-7"></i>
                                     @else
-                                        <x-badge>Not Verivied</x-badge>
+                                        <i class="fas fa-times ml-7" style="color: red"></i>
                                     @endif
                                 </x-td>
                                 <x-td>
                                     <x-badge>{{ $item->roles->first()->name ?? '?'}}</x-badge>
                                 </x-td>
                                 <x-td>
-                                    <div class="flex flex-row w-20 justify-between">
-                                        <a href="{{ route('user.edit',$item->id) }}" class="text-blue-900">Edit</a>
+                                    <div class="flex flex-row w-10 justify-between">
+                                        <a href="{{ route('user.edit',$item->id) }}" class="text-blue-800 flex flex-row items-center"><i class="fas fa-pen mx-2"></i>Edit</a>
                                         <form action="{{ route('user.destroy', $item->id) }}" method="post">
                                             @csrf
                                             @method('delete')
-                                            <button type="submit" onclick="return confirm('Are u Sure!!')" class="text-red-900">Delete</button>
+                                            <button type="submit" onclick="return confirm('Are u Sure!!')" class="text-red-900 flex flex-row items-center"><i class="fas fa-trash-alt mx-2"></i>Delete</button>
                                         </form>
                                     </div>
                                 </x-td>

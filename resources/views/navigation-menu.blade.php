@@ -29,8 +29,8 @@
                         <div class="ml-3 relative">
                             <x-jet-dropdown align="right" width="60">
                                 <x-slot name="trigger">
-                                    <span class="inline-flex rounded-md">
-                                        <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:bg-gray-50 hover:text-gray-700 focus:outline-none focus:bg-gray-50 active:bg-gray-50 transition">
+                                    <span class="inline-flex rounded-2xl">
+                                        <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-2xl text-gray-500 bg-white hover:bg-gray-50 hover:text-gray-700 focus:outline-none focus:bg-gray-50 active:bg-gray-50 transition">
                                             {{ Auth::user()->currentTeam->name }}
 
                                             <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -84,7 +84,7 @@
                                     </button>
                                 @else
                                     <span class="inline-flex rounded-md">
-                                        <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition">
+                                        <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-gray-200 hover:text-gray-700 focus:outline-none transition">
                                             {{ Auth::user()->name }}
 
                                             <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -98,10 +98,12 @@
                             <x-slot name="content">
                                 <!-- Account Management -->
                                 <div class="block px-4 py-2 text-xs text-gray-400">
+                                    <i class="fas fa-user-cog m-1"></i>
                                     {{ __('Manage Account') }}
                                 </div>
 
                                 <x-jet-dropdown-link href="{{ route('profile.show') }}">
+                                    <i class="fas fa-user-circle m-1"></i>
                                     {{ __('Profile') }}
                                 </x-jet-dropdown-link>
 
@@ -120,6 +122,7 @@
                                     <x-jet-dropdown-link href="{{ route('logout') }}"
                                              onclick="event.preventDefault();
                                                     this.closest('form').submit();">
+                                        <i class="fas fa-sign-out-alt m-1"></i>
                                         {{ __('Log Out') }}
                                     </x-jet-dropdown-link>
                                 </form>
@@ -150,6 +153,11 @@
                 {{ __('Client') }}
             </x-jet-responsive-nav-link>
         </div>
+        <div class="pt-2 pb-3 space-y-1">
+            <x-jet-responsive-nav-link href="{{ route('user.index') }}" :active="request()->routeIs('user.*')">
+                {{ __('Admin') }}
+            </x-jet-responsive-nav-link>
+        </div>
 
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200">
@@ -169,6 +177,7 @@
             <div class="mt-3 space-y-1">
                 <!-- Account Management -->
                 <x-jet-responsive-nav-link href="{{ route('profile.show') }}" :active="request()->routeIs('profile.show')">
+                    <i class="fas fa-user-circle m-1"></i>
                     {{ __('Profile') }}
                 </x-jet-responsive-nav-link>
 
@@ -185,6 +194,7 @@
                     <x-jet-responsive-nav-link href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                     this.closest('form').submit();">
+                        <i class="fas fa-sign-out-alt m-1"></i>
                         {{ __('Log Out') }}
                     </x-jet-responsive-nav-link>
                 </form>

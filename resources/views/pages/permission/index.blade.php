@@ -32,12 +32,14 @@
                                     <thead>
                                         <x-tr>
                                             <x-th>
-                                                #
+                                                <i class="fas fa-hashtag"></i>
                                             </x-th>
                                             <x-th>
+                                                <i class="fas fa-id-badge mr-1"></i>
                                                 Permission
                                             </x-th>
                                             <x-th>
+                                                <i class="fas fa-edit mr-1"></i>
                                                 Action
                                             </x-th>
                                         </x-tr>
@@ -52,19 +54,23 @@
                                                     <x-badge>{{ $item->name }}</x-badge>
                                                 </x-td>
                                                 <x-td>
-                                                    <a href="{{ route('permission.edit', $item->id) }}"
-                                                        class="relative inline-block bg-indigo-50 rounded-full px-3 py-1 font-semibold text-indigo-900 leading-tight">
-                                                        Edit
-                                                    </a>
-                                                    <form action="{{ route('permission.destroy', $item->id) }}" method="post" class="relative inline-block">
-                                                     @csrf
-                                                     @method('DELETE')
-                                                     <button type="submit"
-                                                        class="relative inline-block bg-red-50 rounded-full px-3 py-1 font-semibold text-red-900 leading-tight"
-                                                        onclick="return confirm('are you sure?!')">
-                                                        Delete
-                                                    </button>
-                                                    </form>
+                                                    <div class="flex flex-row w-10 justify-between">
+                                                        <a href="{{ route('permission.edit', $item->id) }}"
+                                                            class="text-blue-800 flex flex-row items-center">
+                                                            <i class="fas fa-pen mx-2"></i>
+                                                            Edit
+                                                        </a>
+                                                        <form action="{{ route('permission.destroy', $item->id) }}" method="post" class="relative inline-block">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button type="submit"
+                                                        class="text-red-900 flex flex-row items-center"
+                                                            onclick="return confirm('are you sure?!')">
+                                                            <i class="fas fa-trash-alt mx-2"></i>
+                                                            Delete
+                                                        </button>
+                                                        </form>
+                                                    </div>
                                                 </x-td>
                                             </x-tr>
                                         @endforeach

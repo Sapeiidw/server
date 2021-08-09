@@ -48,13 +48,15 @@
                                         @foreach ($permissions as $item)
                                             <x-tr>
                                                 <x-td>
-                                                    <p class="text-gray-900 whitespace-no-wrap">{{ $loop->iteration }}</p>
+                                                    <p class="text-gray-900 whitespace-no-wrap ml-3">{{ $loop->iteration }}</p>
                                                 </x-td>
                                                 <x-td>
-                                                    <x-badge>{{ $item->name }}</x-badge>
+                                                    <div class="ml-3">
+                                                        <x-badge>{{ $item->name }}</x-badge>
+                                                    </div>
                                                 </x-td>
                                                 <x-td>
-                                                    <div class="flex flex-row w-10 justify-between">
+                                                    <div class="flex flex-row w-10 justify-between ml-2">
                                                         <a href="{{ route('permission.edit', $item->id) }}"
                                                             class="text-blue-800 flex flex-row items-center">
                                                             <i class="fas fa-pen mx-2"></i>

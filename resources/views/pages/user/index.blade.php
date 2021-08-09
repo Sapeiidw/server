@@ -76,10 +76,14 @@
                                     </div>
                                 </x-td>
                                 <x-td>
-                                    {{ $item->email }}
+                                    <div class=" ml-3">
+                                        {{ $item->email }}
+                                    </div>
                                 </x-td>
                                 <x-td>
-                                    {{ $item->created_at }}
+                                    <div class=" ml-3">
+                                        {{ $item->created_at }}
+                                    </div>
                                 </x-td>
                                 <x-td>
                                     @if ($item->email_verified_at)
@@ -89,10 +93,12 @@
                                     @endif
                                 </x-td>
                                 <x-td>
-                                    <x-badge>{{ $item->roles->first()->name ?? '?'}}</x-badge>
+                                    <div class=" ml-3">
+                                        <x-badge>{{ $item->roles->first()->name ?? '?'}}</x-badge>
+                                    </div>
                                 </x-td>
                                 <x-td>
-                                    <div class="flex flex-row w-10 justify-between">
+                                    <div class="flex flex-row w-10 justify-between ml-2">
                                         <a href="{{ route('user.edit',$item->id) }}" class="text-blue-800 flex flex-row items-center"><i class="fas fa-pen mx-2"></i>Edit</a>
                                         <form action="{{ route('user.destroy', $item->id) }}" method="post">
                                             @csrf

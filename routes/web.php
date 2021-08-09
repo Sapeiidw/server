@@ -16,12 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::middleware(['auth','verified'])->group(function () {
     Route::get('/client', function () {return view('client');})->name('client');
+    Route::get('/', function () {return view('client');});
     Route::resource('user', UserController::class);
     Route::resource('role', RoleController::class);
     Route::resource('permission', PermissionController::class);

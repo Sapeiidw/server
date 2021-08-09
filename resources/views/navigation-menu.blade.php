@@ -17,7 +17,7 @@
                         <x-jet-nav-link href="{{ route('client') }}" :active="request()->routeIs('client')">
                             {{ __('Client') }}
                         </x-jet-nav-link>
-                        <x-jet-nav-link href="{{ route('user.index') }}" :active="request()->routeIs('user.*')">
+                        <x-jet-nav-link href="{{ route('user.index') }}" :active="request()->routeIs('user.*','permission.*','role.*')">
                             {{ __('Admin') }}
                         </x-jet-nav-link>
                     </div>
@@ -25,7 +25,7 @@
 
                 <div class="hidden sm:flex sm:items-center sm:ml-6">
                     <!-- Teams Dropdown -->
-                    @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
+                    {{-- @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
                         <div class="ml-3 relative">
                             <x-jet-dropdown align="right" width="60">
                                 <x-slot name="trigger">
@@ -72,7 +72,7 @@
                                 </x-slot>
                             </x-jet-dropdown>
                         </div>
-                    @endif
+                    @endif --}}
 
                     <!-- Settings Dropdown -->
                     <div class="ml-4 relative">
@@ -200,7 +200,7 @@
                 </form>
 
                 <!-- Team Management -->
-                @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
+                {{-- @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
                     <div class="border-t border-gray-200"></div>
 
                     <div class="block px-4 py-2 text-xs text-gray-400">
@@ -228,7 +228,7 @@
                     @foreach (Auth::user()->allTeams() as $team)
                         <x-jet-switchable-team :team="$team" component="jet-responsive-nav-link" />
                     @endforeach
-                @endif
+                @endif --}}
             </div>
         </div>
     </div>

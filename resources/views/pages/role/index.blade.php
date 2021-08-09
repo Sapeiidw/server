@@ -25,7 +25,7 @@
                     <a href="{{ route('role.create') }}" >Add Role</a>
                 </x-jet-button>
             </div>
-            <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
+            <div class="py-4 mx-auto overflow-x-auto">
                 <div class="inline-block min-w-full shadow rounded-lg overflow-hidden">
                     <table class="min-w-full leading-normal">
                         <thead>
@@ -64,7 +64,7 @@
                                         </div>
                                     </x-td>
                                     <x-td>
-                                        <div class="flex flex-row w-10 justify-between ml-2">
+                                        <div class="flex sm:flex-row flex-col w-10 justify-between ml-2">
                                             <a href="{{ route('role.edit', $item->id) }}" class="text-blue-800 flex flex-row items-center">
                                                 <i class="fas fa-pen mx-2"></i>
                                                 Edit

@@ -1,4 +1,4 @@
-<div class=" hover:bg-blue-300 shadow-md flex-col border border-gray-300 md:w-1/4 xl:w-1/3 bg-gray-300 rounded-2xl m-5">
+<div class=" hover:bg-blue-300 shadow-md flex-col border border-gray-300 md:w-1/4 xl:w-1/3 bg-gray-100 rounded-2xl m-5">
     <div class="w-full sm:items-center sm:justify-center">
         <div class="flex-none bg-white mt-4">
             {{ $slot }}

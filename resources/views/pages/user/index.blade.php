@@ -28,7 +28,7 @@
                 </x-jet-button>
 
             </div>
-            <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 pt-4 overflow-x-auto">
+            <div class="mx-auto pt-4 overflow-x-auto">
                 <div class="inline-block min-w-full shadow rounded-2xl overflow-hidden">
                     <table class="min-w-full leading-normal border-black ">
                         <thead>
@@ -98,7 +98,7 @@
                                     </div>
                                 </x-td>
                                 <x-td>
-                                    <div class="flex flex-row w-10 justify-between ml-2">
+                                    <div class="flex sm:flex-row flex-col w-10 justify-between ml-2">
                                         <a href="{{ route('user.edit',$item->id) }}" class="text-blue-800 flex flex-row items-center"><i class="fas fa-pen mx-2"></i>Edit</a>
                                         <form action="{{ route('user.destroy', $item->id) }}" method="post">
                                             @csrf

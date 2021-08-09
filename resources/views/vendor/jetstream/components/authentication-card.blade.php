@@ -7,6 +7,9 @@
         <div class="ml-auto mr-auto p-4 justify-items-center" >
             {{ $logo }}
         </div>
+        {{-- <div>
+            {{ $footer }}
+        </div> --}}
     </div>
 
 </div>

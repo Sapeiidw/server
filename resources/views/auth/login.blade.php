@@ -15,13 +15,13 @@
         <form method="POST" action="{{ route('login') }}">
             @csrf
             <div>
-                <h1 class=" font-semibold text-xl text-gray-600">
+                <h1 class="font-semibold text-xl text-gray-600">
                     Sign in
                 </h1>
             </div>
 
-            <div class="my-4">
-                <x-jet-input placeholder="E-mail" id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+            <div class="my-4 ">
+                <x-jet-input placeholder="E-mail" id="email" class="block mt-1 w-full " type="email" name="email" :value="old('email')" required autofocus />
             </div>
 
             <div class="mt-4">
@@ -41,7 +41,7 @@
             </div>
 
             <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('register') }}">
+                <a class=" flex-row underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('register') }}">
                     {{ __('Dont have an account? Register') }}
                 </a>
 
@@ -50,5 +50,11 @@
                 </x-jet-button>
             </div>
         </form>
+        {{-- @slot('footer')
+        <a class=" flex-row underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('register') }}">
+            {{ __('Dont have an account? Register') }}
+        </a>
+        @endslot --}}
+
     </x-jet-authentication-card>
 </x-guest-layout>

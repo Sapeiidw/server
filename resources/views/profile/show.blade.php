@@ -10,10 +10,9 @@
         <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
             <x-stickyprofile>
                 @slot('title')
-                <div>
-                    coba aja dulu
-
-                </div>
+                <strong>
+                    Profile Information
+                </strong>
                 @endslot
                 @if (Laravel\Fortify\Features::canUpdateProfileInformation())
                 @livewire('profile.update-profile-information-form')
@@ -25,33 +24,35 @@
 
             <x-stickyprofile>
                 @slot('title')
-                    coba aja dulu 2
+                <strong>
+                    Update Password
+                </strong>
                 @endslot
                 @if (Laravel\Fortify\Features::enabled(Laravel\Fortify\Features::updatePasswords()))
                     <div class="mt-10 sm:mt-0">
                         @livewire('profile.update-password-form')
                     </div>
-
-                    <x-jet-section-border />
                 @endif
             </x-stickyprofile>
 
             <x-stickyprofile>
                 @slot('title')
-                    coba aja dulu 3
+                <strong>
+                    Two Factor Authentication
+                </strong>
                 @endslot
                 @if (Laravel\Fortify\Features::canManageTwoFactorAuthentication())
                     <div class="mt-10 sm:mt-0">
                         @livewire('profile.two-factor-authentication-form')
                     </div>
-
-                    <x-jet-section-border />
                 @endif
             </x-stickyprofile>
 
             <x-stickyprofile>
                 @slot('title')
-                    coba aja dulu 4
+                    <strong>
+                        Browser Sessions
+                    </strong>
                 @endslot
                 <div class="mt-10 sm:mt-0">
                     @livewire('profile.logout-other-browser-sessions-form')
@@ -60,11 +61,11 @@
 
             <x-stickyprofile>
                 @slot('title')
-                    coba aja dulu 5
+                <strong>
+                    Delete Account
+                </strong>
                 @endslot
                 @if (Laravel\Jetstream\Jetstream::hasAccountDeletionFeatures())
-                    <x-jet-section-border />
-
                     <div class="mt-10 sm:mt-0">
                         @livewire('profile.delete-user-form')
                     </div>

@@ -15,7 +15,7 @@
         <form method="POST" action="{{ route('login') }}">
             @csrf
             <div>
-                <h1 class="text-bold text-gray-700">
+                <h1 class=" font-semibold text-xl text-gray-600">
                     Sign in
                 </h1>
             </div>

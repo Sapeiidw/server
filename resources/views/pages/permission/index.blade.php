@@ -7,7 +7,7 @@
     </x-slot>
     <x-boxtable>
         <div class="my-2 flex justify-between sm:flex-row flex-col">
-            <div class="block relative">
+            <div class="block relative w-3/4">
                 <span class="h-full absolute inset-y-0 left-0 flex items-center pl-2">
                     <svg viewBox="0 0 24 24" class="h-4 w-4 fill-current text-gray-500">
                         <path
@@ -26,7 +26,7 @@
 
         </div>
         <div class="mx-auto overflow-x-auto">
-            <div class="inline-block min-w-full shadow rounded-lg overflow-hidden">
+            <div class="inline-block border min-w-full shadow rounded-lg overflow-hidden">
                 <table class="min-w-full leading-normal">
                     <thead>
                         <x-tr>

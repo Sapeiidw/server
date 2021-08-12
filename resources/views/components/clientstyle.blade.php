@@ -1,14 +1,16 @@
-<div class=" hover:bg-blue-300 shadow-md flex-col border border-gray-300 md:w-1/4 xl:w-1/3 bg-gray-100 rounded-2xl m-5">
-    <div class="w-full sm:items-center sm:justify-center">
-        <div class="flex-none bg-white mt-4">
-            {{ $slot }}
-        </div>
-        <div class="m-1">
-            <button class="w-full hover:bg-blue-700 bg-blue-500 rounded-full p-1 text-gray-300">
-                <div class="px-2 items-start justify-center">
-                    {{ $title }}
-                </div>
-            </button>
+<div class="flex-col border border-gray-300 md:w-1/4 xl:w-1/3 bg-white rounded-2xl m-5">
+    <div class="border border-gray-300 rounded-2xl bg-gray-100 pt-3 m-2">
+        <div class="w-full sm:items-center sm:justify-center">
+            <div class="flex-none">
+                {{ $slot }}
+            </div>
+            <div class="m-1">
+                <button class="w-full bg-white rounded-full p-1 font-semibold text-gray-600">
+                    <div class="px-2 items-start justify-center">
+                        {{ $title }}
+                    </div>
+                </button>
+            </div>
         </div>
     </div>
 </div>

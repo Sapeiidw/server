@@ -4,7 +4,6 @@
             <img class="hover:grow hover:shadow-lg" src="https://images.unsplash.com/photo-1555982105-d25af4182e4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80">
             <div class="pt-1 flex items-center justify-between">
                 <p class="">client</p>
-
             </div>
         </a>
     </div>

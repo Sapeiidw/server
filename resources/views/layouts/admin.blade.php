@@ -12,6 +12,9 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        {{-- <link href="{{ asset('fontawesome/css/all.css') }}" rel="stylesheet" type="text/css"> --}}
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
@@ -30,7 +33,7 @@
             <!-- Page Heading -->
 
             <!-- Page Content -->
-            <main class="flex min-h-screen h-full">
+            <main class="flex min-h-screen">
                 @include('sidebar-admin')
                 {{ $slot }}
             </main>

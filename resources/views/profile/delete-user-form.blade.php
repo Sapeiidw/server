@@ -4,7 +4,9 @@
     </x-slot>
 
     <x-slot name="description">
-        {{ __('Permanently delete your account.') }}
+        <div class=" text-gray-600">
+            {{ __('Permanently delete your account.') }}
+        </div>
     </x-slot>
 
     <x-slot name="content">
@@ -21,9 +23,12 @@
         <!-- Delete User Confirmation Modal -->
         <div class=" items-center justify-center">
             <x-jet-dialog-modal wire:model="confirmingUserDeletion">
-                <x-slot name="title">
-                    {{ __('Delete Account') }}
-                </x-slot>
+                <div class=" justify-end">
+                    <x-slot name="title">
+                        {{ __('Delete Account') }}
+                    </x-slot>
+                </div>
+
 
                 <x-slot name="content">
                     {{ __('Are you sure you want to delete your account? Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.') }}

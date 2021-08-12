@@ -1,3 +1,3 @@
-<td class="px-5 py-5 border-b border-gray-200 text-sm">
+<td class="px-2 py-2 border-b border-gray-200 text-sm">
     {{ $slot }}
 </td>

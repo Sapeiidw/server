@@ -4,7 +4,9 @@
     </x-slot>
 
     <x-slot name="description">
-        {{ __('Add additional security to your account using two factor authentication.') }}
+        <div class=" text-gray-600">
+            {{ __('Add additional security to your account using two factor authentication.') }}
+        </div>
     </x-slot>
 
     <x-slot name="content">

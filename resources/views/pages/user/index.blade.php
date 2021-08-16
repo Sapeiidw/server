@@ -1,15 +1,14 @@
 <x-admin-layout>
+    @section('title', 'User')
     {{-- <link rel="stylesheet" href="//cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css"> --}}
     <div class="w-4/5">
-
-
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('User') }}
-        </h2>
-    </x-slot>
+        <x-slot name="header">
+            <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+                {{ __('User') }}
+            </h2>
+        </x-slot>
         <x-boxtable>
-            <div class="my-2 flex justify-between sm:flex-row flex-col">
+            <div class=" flex justify-between sm:flex-row flex-col py-4 px-2">
                 <div class="block relative w-3/4">
                     <span class="h-full absolute inset-y-0 left-0 flex items-center pl-2">
                         <svg viewBox="0 0 24 24" class="h-4 w-4 fill-current text-gray-500">

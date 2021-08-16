@@ -4,7 +4,7 @@
     </x-slot>
 
     <x-slot name="description">
-        <div class=" text-gray-600">
+        <div class="px-2 text-gray-600">
             {{ __('Add additional security to your account using two factor authentication.') }}
         </div>
     </x-slot>
@@ -52,7 +52,7 @@
             @endif
         @endif
 
-        <div class="mt-5">
+        <div class="flex justify-end mt-5">
             @if (! $this->enabled)
                 <x-jet-confirms-password wire:then="enableTwoFactorAuthentication">
                     <x-jet-button type="button" wire:loading.attr="disabled">

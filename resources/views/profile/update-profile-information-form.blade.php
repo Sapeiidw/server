@@ -4,7 +4,7 @@
     </x-slot>
 
     <x-slot name="description">
-        <div class="bg-red-500 text-gray-600">
+        <div class="px-2 text-gray-600">
             {{ __('Update your account\'s profile information and email address.') }}
         </div>
     </x-slot>

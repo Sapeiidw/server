@@ -1,5 +1,5 @@
-<div class="flex-col border border-gray-300 md:w-1/4 xl:w-1/3 bg-white rounded-2xl m-5">
-    <div class="border border-gray-300 rounded-2xl bg-gray-100 pt-3 m-2">
+<div class="flex-col  shadow-md border border-gray-200 md:w-1/4 xl:w-1/3 bg-white rounded-2xl m-5">
+    <div class="border border-gray-200 rounded-2xl bg-gray-100 pt-3 m-2">
         <div class="w-full sm:items-center sm:justify-center">
             <div class="flex-none">
                 {{ $slot }}

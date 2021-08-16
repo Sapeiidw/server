@@ -4,7 +4,7 @@
     </x-slot>
 
     <x-slot name="description">
-        <div class=" text-gray-600">
+        <div class="px-2 text-gray-600">
             {{ __('Ensure your account is using a long, random password to stay secure.') }}
         </div>
     </x-slot>

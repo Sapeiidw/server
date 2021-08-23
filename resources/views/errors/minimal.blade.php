@@ -30,8 +30,8 @@
     <body >
         {{-- <div class="background h-80 w-full bg-right-bottom bg-no-repeat" style="background-image: ('{{ asset('/img/undraw_Faq_re_31cw.svg') }}')" >
             <img  alt="" srcset="">
-        </div>
-        @yield('code')
+        </div> --}}
+        {{-- @yield('code')
         @yield('message') --}}
         <div class="min-h-screen ">
             {{-- <div class="">

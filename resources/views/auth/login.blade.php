@@ -29,27 +29,37 @@
                 <x-jet-input placeholder="Password" id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
             </div>
 
-            <div class="flex justify-between items-center mt-4">
+            <div class="flex justify-between items-center mt-4 mb-12">
                 <label for="remember_me" class="flex items-center">
                     <x-jet-checkbox id="remember_me" name="remember" />
                     <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
                 </label>
-                @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
-                @endif
             </div>
 
-            <div class="flex items-center justify-end mt-4">
+            <div class="flex items-center justify-between mt-4">
+                <div class="flex flex-col">
+                    @if (Route::has('password.request'))
+                <a class="underline text-sm text-red-600 hover:text-gray-900" href="{{ route('password.request') }}">
+                    {{ __('Forgot your password?') }}
+                </a>
+                @endif
                 <a class=" flex-row underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('register') }}">
                     {{ __('Dont have an account? Register') }}
                 </a>
+                </div>
 
-                <x-jet-button class="ml-4">
+                <x-jet-button class="">
                     {{ __('Log in') }}
                 </x-jet-button>
             </div>
+            {{-- <div class="flex flex-col-reverse">
+            @section('footer')
+
+
+            @endsection
+            </div> --}}
+
+
         </form>
         {{-- @slot('footer')
         <a class=" flex-row underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('register') }}">

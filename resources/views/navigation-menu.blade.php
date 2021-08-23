@@ -14,10 +14,10 @@
                     <!-- Navigation Links -->
                     <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
 
-                        <x-jet-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')">
+                        <x-jet-nav-link class=" lg:text-base font-medium" href="{{ route('home') }}" :active="request()->routeIs('home')">
                             {{ __('Home') }}
                         </x-jet-nav-link>
-                        <x-jet-nav-link href="{{ route('user.index') }}" :active="request()->routeIs('user.*','permission.*','role.*')">
+                        <x-jet-nav-link class=" lg:text-base font-medium" href="{{ route('user.index') }}" :active="request()->routeIs('user.*','permission.*','role.*')">
                             {{ __('Admin') }}
                         </x-jet-nav-link>
                     </div>

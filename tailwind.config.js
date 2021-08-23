@@ -14,6 +14,7 @@ module.exports = {
             fontFamily: {
                 sans: ['Quicksand'],
             },
+
         },
     },
 
@@ -21,6 +22,7 @@ module.exports = {
         extend: {
             opacity: ['active'],
             backgroundColor: ['active'],
+
         },
     },
 

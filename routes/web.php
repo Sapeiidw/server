@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\ClientController;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
+use App\Models\Client;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,10 +20,14 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::middleware(['auth','verified'])->group(function () {
-    Route::get('/client', function () {return view('client');})->name('client');
-    Route::get('/', function () {return view('client');});
+    // Route::get('/client', function () {return view('client');})->name('client');
+    Route::get('/', function () {
+        $client = Client::all();
+        return view('client',compact('client'));
+    });
     Route::resource('user', UserController::class);
     Route::resource('role', RoleController::class);
     Route::resource('permission', PermissionController::class);
+    Route::resource('client', ClientController::class);
 });
 

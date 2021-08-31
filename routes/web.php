@@ -3,7 +3,6 @@
 use App\Models\Client;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LogController;
-use Spatie\Activitylog\Models\Activity;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ClientController;
@@ -27,10 +26,6 @@ Route::middleware(['auth','verified'])->group(function () {
         $client = Client::all();
         return view('client',compact('client'));
     })->name('home');
-    Route::get('/log', function () {
-        $activity = Activity::all();
-        return $activity;
-    });
     Route::resource('user', UserController::class);
     Route::resource('role', RoleController::class);
     Route::resource('permission', PermissionController::class);

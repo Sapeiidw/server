@@ -4,7 +4,7 @@
     </x-slot>
 
     <x-slot name="description">
-        <div class=" text-gray-600">
+        <div class="px-2 text-gray-600">
             {{ __('Manage and log out your active sessions on other browsers and devices.') }}
         </div>
     </x-slot>
@@ -15,7 +15,7 @@
         </div>
 
         @if (count($this->sessions) > 0)
-            <div class="mt-5 space-y-6">
+            <div class=" mt-5 space-y-6">
                 <!-- Other Browser Sessions -->
                 @foreach ($this->sessions as $session)
                     <div class="flex items-center">
@@ -53,7 +53,7 @@
             </div>
         @endif
 
-        <div class="flex items-center mt-5">
+        <div class="flex justify-end items-center mt-5">
             <x-jet-button wire:click="confirmLogout" wire:loading.attr="disabled">
                 {{ __('Log Out Other Browser Sessions') }}
             </x-jet-button>

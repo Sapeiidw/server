@@ -1,4 +1,5 @@
 <x-admin-layout>
+    @section('title', 'Create User')
     <div class="w-4/5">
         <x-slot name="header">
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -12,7 +13,9 @@
                     @csrf
                     <div class="mt-4">
                         {{-- <x-jet-label for="email" value="Name" /> --}}
-                        <x-jet-input placeholder="Name" class="block w-full mt-1" type="text" name="name" :value="old('name')"/>
+                        <x-jet-input placeholder="Name"
+                        class="block w-full bg-white text-sm placeholder-gray-400 text-gray-700 focus:bg-white focus:placeholder-gray-600 focus:text-gray-700 focus:outline-none"
+                        type="text" name="name" :value="old('name')"/>
                         @error('name')
                             <span class="text-red-900 p-2">{{ $message }}</span>
                         @enderror
@@ -20,7 +23,9 @@
 
                     <div class="mt-4">
                         {{-- <x-jet-label for="email" value="Email" /> --}}
-                        <x-jet-input placeholder="Email" class="block w-full mt-1" type="email" name="email" :value="old('email')" />
+                        <x-jet-input placeholder="Email"
+                            class="block w-full bg-white text-sm placeholder-gray-400 text-gray-700 focus:bg-white focus:placeholder-gray-600 focus:text-gray-700 focus:outline-none"
+                            type="email" name="email" :value="old('email')" />
                         @error('email')
                             <span class="text-red-900 p-2">{{ $message }}</span>
                         @enderror
@@ -30,10 +35,11 @@
                     <div class="mt-4">
                         {{-- <x-jet-label for="password" :value="__('Password')" /> --}}
 
-                        <x-jet-input placeholder="Password"  id="password" class="block mt-1 w-full"
-                                        type="password"
-                                        name="password"
-                                        required autocomplete="new-password" />
+                        <x-jet-input placeholder="Password"  id="password"
+                            class="block w-full bg-white text-sm placeholder-gray-400 text-gray-700 focus:bg-white focus:placeholder-gray-600 focus:text-gray-700 focus:outline-none"
+                            type="password"
+                            name="password"
+                            required autocomplete="new-password" />
                         @error('password')
                             <span class="text-red-900 p-2">{{ $message }}</span>
                         @enderror
@@ -43,16 +49,17 @@
                     <div class="mt-4">
                         {{-- <x-jet-label for="password_confirmation" :value="__('Confirm Password')" /> --}}
 
-                        <x-jet-input placeholder="Confirm Password" id="password_confirmation" class="block mt-1 w-full"
-                                        type="password"
-                                        name="password_confirmation" required />
+                        <x-jet-input placeholder="Confirm Password" id="password_confirmation"
+                            class="block w-full bg-white text-sm placeholder-gray-400 text-gray-700 focus:bg-white focus:placeholder-gray-600 focus:text-gray-700 focus:outline-none"
+                            type="password"
+                            name="password_confirmation" required />
                     </div>
 
                     @role('super-admin')
                     <div class="mt-4">
                         <x-jet-label for="role" value="Role" />
                         <select name="role" id="role"
-                            class="block w-full mt-1 rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" >
+                            class="block w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" >
                             @foreach ($roles as $role)
                                 <option value="{{ $role }}">{{ $role }}</option>
                             @endforeach
@@ -62,8 +69,9 @@
                         @enderror
                     </div>
                     @endrole
-
-                    <x-jet-button type="submit" class="mt-4">Create</x-jet-button>
+                    <div class="flex mt-4 justify-end items-center">
+                        <x-jet-button type="submit">Create</x-jet-button>
+                    </div>
                 </form>
             </div>
         </x-boxtable>

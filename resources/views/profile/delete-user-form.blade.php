@@ -4,7 +4,7 @@
     </x-slot>
 
     <x-slot name="description">
-        <div class=" text-gray-600">
+        <div class="px-2 text-gray-600 ">
             {{ __('Permanently delete your account.') }}
         </div>
     </x-slot>
@@ -14,7 +14,7 @@
             {{ __('Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain.') }}
         </div>
 
-        <div class="mt-5">
+        <div class="flex justify-end mt-5">
             <x-jet-danger-button wire:click="confirmUserDeletion" wire:loading.attr="disabled">
                 {{ __('Delete Account') }}
             </x-jet-danger-button>

@@ -1,4 +1,5 @@
 <x-admin-layout>
+    @section('title', 'Create Permission')
     <div class="w-4/5">
         <x-slot name="header">
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -13,9 +14,9 @@
                 <form method="POST" action="{{ route('permission.store') }}">
                     @csrf
                     <div class="mt-4">
-
-                        <x-jet-label for="name" value="Name" />
-                        <x-jet-input class="block w-full mt-1" type="text" name="name" :value="old('name')"/>
+                        <x-jet-input placeholder="Name"
+                        class="block w-full bg-white text-sm placeholder-gray-400 text-gray-700 focus:bg-white focus:placeholder-gray-600 focus:text-gray-700 focus:outline-none"
+                        type="text" name="name" :value="old('name')"/>
                         @error('name')
                             <span class="text-red-900 p-2">{{ $message }}</span>
                         @enderror

@@ -1,12 +1,16 @@
 <nav x-data="{ open: false }" class="bg-white">
     <!-- Primary Navigation Menu -->
-    <div class="shadow-sm">
+    <div class="shadow">
         <div class="bg-white px-2 sm:px-6 lg:px-8">
             <div class="max-w-6xl flex justify-between items-center mx-auto h-24">
                 <div class="flex">
                     <!-- Logo -->
                     <div class="flex-shrink-0 flex items-center">
+<<<<<<< HEAD
+                        <a href="{{ route('home') }}">
+=======
                         <a href="{{ route('client.index') }}">
+>>>>>>> 13a407242d878dfe64ff6a619330fe35cf244314
                             <x-jet-application-mark class="block h-9 w-auto" />
                         </a>
                     </div>
@@ -14,10 +18,15 @@
                     <!-- Navigation Links -->
                     <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
 
+<<<<<<< HEAD
+                        <x-jet-nav-link class=" lg:text-base font-medium" href="{{ route('home') }}" :active="request()->routeIs('home')">
+                            {{ __('Home') }}
+=======
                         <x-jet-nav-link href="{{ route('client.index') }}" :active="request()->routeIs('client.*')">
                             {{ __('Client') }}
+>>>>>>> 13a407242d878dfe64ff6a619330fe35cf244314
                         </x-jet-nav-link>
-                        <x-jet-nav-link href="{{ route('user.index') }}" :active="request()->routeIs('user.*','permission.*','role.*')">
+                        <x-jet-nav-link class=" lg:text-base font-medium" href="{{ route('user.index') }}" :active="request()->routeIs('user.*','permission.*','role.*')">
                             {{ __('Admin') }}
                         </x-jet-nav-link>
                     </div>
@@ -97,10 +106,10 @@
 
                             <x-slot name="content">
                                 <!-- Account Management -->
-                                <div class="block px-4 py-2 text-xs text-gray-400">
+                                {{-- <div class="block px-4 py-2 text-xs text-gray-400">
                                     <i class="fas fa-user-cog m-1"></i>
                                     {{ __('Manage Account') }}
-                                </div>
+                                </div> --}}
 
                                 <x-jet-dropdown-link href="{{ route('profile.show') }}">
                                     <i class="fas fa-user-circle m-1"></i>
@@ -149,12 +158,17 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
+<<<<<<< HEAD
+            <x-jet-responsive-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')">
+                {{ __('Home') }}
+=======
             <x-jet-responsive-nav-link href="{{ route('client.index') }}" :active="request()->routeIs('client.*')">
                 {{ __('Client') }}
+>>>>>>> 13a407242d878dfe64ff6a619330fe35cf244314
             </x-jet-responsive-nav-link>
         </div>
         <div class="pt-2 pb-3 space-y-1">
-            <x-jet-responsive-nav-link href="{{ route('user.index') }}" :active="request()->routeIs('user.*')">
+            <x-jet-responsive-nav-link href="{{ route('user.index') }}" :active="request()->routeIs('user.*','permission.*','role.*')">
                 {{ __('Admin') }}
             </x-jet-responsive-nav-link>
         </div>

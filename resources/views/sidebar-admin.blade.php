@@ -18,5 +18,17 @@
                 {{ __('Permission') }}
             </x-sidelink>
         </div>
+        <div class="flex py-3 justify-between">
+            <x-sidelink href="{{ route('client.index') }}" :active="request()->routeIs('client.*')">
+                <i class="fas fa-id-badge m-2"></i>
+                {{ __('Client') }}
+            </x-sidelink>
+        </div>
+        <div class="flex py-3 justify-between">
+            <x-sidelink href="{{ route('log.index') }}" :active="request()->routeIs('log.*')">
+                <i class="fas fa-id-badge m-2"></i>
+                {{ __('Log Activity') }}
+            </x-sidelink>
+        </div>
     </nav>
 </aside>

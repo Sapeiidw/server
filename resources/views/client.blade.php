@@ -19,4 +19,5 @@
             </div>
         </div>
     </div>
+    {{ Spatie\Activitylog\Models\Activity::all() }}
 </x-app-layout>

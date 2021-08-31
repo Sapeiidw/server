@@ -26,6 +26,11 @@ class RoleController extends Controller
      */
     public function index(Request $request)
     {
+        activity('role')
+        ->performedOn(new Role)
+        ->causedBy(auth()->user())
+        ->log(':causer.name visited role page.');
+
         $roles = Role::with('permissions')
             ->where('name','like',"%{$request->search}%")
             ->paginate(15);
@@ -53,7 +58,12 @@ class RoleController extends Controller
         $request->validate([
             'name' => 'required|string|unique:roles',
         ]);
-        Role::create(['name'=> $request->name]);        
+        $role = Role::create(['name'=> $request->name]);        
+        activity('role')
+        ->performedOn($role)
+        ->withProperties($request)
+        ->causedBy(auth()->user())
+        ->log('This role has been created');
         return back()->with('success','Role was created!!!');
     }
 
